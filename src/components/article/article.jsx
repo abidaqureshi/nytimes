@@ -7,7 +7,7 @@ import '../../containers/articles/style/articles.scss'
 const Article = (props) => {
   const { articleArray } = props
   return articleArray.map((article, id) => (
-    <Link to={`/article-detail/${id}`} className="list-group-item list-group-item-action flex-column align-items-start" key={new Date().getTime() + Math.random()}>
+    <Link to={`/article-detail/${id}`} className="list-group-item list-group-item-action flex-column align-items-start" key={`${new Date().getTime()}_ ${Math.random()}`}>
       <div className="device-responsive w-100 justify-content-between">
         <h5 className="mb-1">
           {article.headline.main}
@@ -17,7 +17,7 @@ const Article = (props) => {
         </small>
       </div>
       <div className="device-responsive w-100 justify-content-between ">
-        <p className="mb-1">
+        <p className="mb-1 col-sm-8 col-lg-8">
           {article.lead_paragraph}
         </p>
         <span>
