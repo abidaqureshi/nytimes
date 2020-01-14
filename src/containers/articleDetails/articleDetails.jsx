@@ -45,8 +45,13 @@ class ArticleDetail extends PureComponent {
 }
 export default ArticleDetail
 
+ArticleDetail.defaultProps = {
+
+  lead_paragraph: '',
+}
+
 ArticleDetail.propTypes = {
   match: PropTypes.object.isRequired,
   articles: PropTypes.array.isRequired,
-  lead_paragraph: PropTypes.string.isRequired,
+  lead_paragraph: PropTypes.string,
 }
