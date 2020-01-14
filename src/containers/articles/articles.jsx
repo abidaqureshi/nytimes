@@ -78,6 +78,7 @@ export default Articles
 Articles.defaultProps = {
   reason: '',
   error: false,
+  lead_paragraph: '',
 }
 
 Articles.propTypes = {
@@ -86,5 +87,5 @@ Articles.propTypes = {
   loader: PropTypes.bool.isRequired,
   reason: PropTypes.string,
   error: PropTypes.bool,
-  lead_paragraph: PropTypes.string.isRequired,
+  lead_paragraph: PropTypes.string,
 }
