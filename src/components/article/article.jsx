@@ -4,6 +4,11 @@ import formatDate from '../../utility/functions'
 import Config from '../../config'
 import '../../containers/articles/style/articles.scss'
 
+/*
+A functional component which recieves props and
+return JSX
+*/
+
 const Article = (props) => {
   const { articleArray } = props
   return articleArray.map((article, id) => (
