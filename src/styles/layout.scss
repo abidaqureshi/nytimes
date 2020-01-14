@@ -1,0 +1,32 @@
+body {
+  font-family: nyt-cheltenham,georgia,'times new roman',times,serif !important;
+  font-weight: 400;
+}
+
+.center-contents {
+  text-align: center;
+}
+.muted-text-css-padding {
+  padding-left:20px;
+}
+.js-element_show {
+  display:block;  
+}
+.js-element_hide {
+  display:none;
+}
+
+.device-responsive {
+
+  display:flex !important;
+}
+
+@media (max-width: 1024px) {
+
+  .device-responsive {
+   display:block !important;
+  }
+}  
+
+@import "~bootstrap/scss/bootstrap.scss";
+
