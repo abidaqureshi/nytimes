@@ -1,13 +1,26 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
+import { Link, withRouter } from 'react-router-dom'
 
-const Navigations = () => (
-  <nav>
-    <Link to="/">
-      Home
-    </Link>
-    {' '}
-  </nav>
-)
+class Navigations extends PureComponent {
+  render() {
+    const { location: { pathname } } = this.props
+    return (
+      <nav>
+        {pathname !== '/' ?
+          (
+            <Link to="/">
+            Back to home
+            </Link>
+          ) : ''}
 
-export default Navigations
+      </nav>
+    )
+  }
+}
+
+export default withRouter(Navigations)
+
+Navigations.propTypes = {
+  location: PropTypes.string.isRequired,
+}
