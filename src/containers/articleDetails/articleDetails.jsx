@@ -1,13 +1,23 @@
 /* eslint-disable camelcase */
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import { Redirect } from 'react-router-dom'
 import Config from '../../config'
 
 class ArticleDetail extends PureComponent {
   render() {
     const { match: { params }, articles } = this.props
     const articleId = params.id
-    const article = articles[articleId]
+    let article = []
+    /*
+      If articleId exist load the details
+      else redirects to home page
+    */
+    if (articles[articleId]) {
+      article = articles[articleId]
+    } else {
+      return (<Redirect to="/" />)
+    }
     const { headline, multimedia, lead_paragraph } = article
     return (
       <div className="row justify-content-sm-center justify-content-lg-center">
