@@ -1,4 +1,4 @@
-# The New York Times Articles API
+# The New York Times Articles App
 
 ## Getting Started
 ### prerequisite
