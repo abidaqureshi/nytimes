@@ -9,7 +9,6 @@ class ArticleDetail extends PureComponent {
     const articleId = params.id
     const article = articles[articleId]
     const { headline, multimedia, lead_paragraph } = article
-    console.log(' the params are ', params, 'articles for details ', articles)
     return (
       <div className="row justify-content-sm-center justify-content-lg-center">
         <div className="center-contents col-sm-12 col-lg-12">
