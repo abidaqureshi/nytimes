@@ -14,7 +14,6 @@ const SERVER_ADDRESS = `${Config.apiBaseUrl}?api-key=${Config.apiKey}`
 
 export function* fetchAllArticles(args) {
   const { searchText, sortBy } = args.data
-  console.log('args.data ', args.data)
   try {
     const response = yield axios.get(`${SERVER_ADDRESS}&q=${searchText}&sort=${sortBy}`)
     const { response: { docs } } = response.data
