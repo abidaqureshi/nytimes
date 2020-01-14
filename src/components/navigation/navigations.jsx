@@ -22,5 +22,5 @@ class Navigations extends PureComponent {
 export default withRouter(Navigations)
 
 Navigations.propTypes = {
-  location: PropTypes.string.isRequired,
+  location: PropTypes.object.isRequired,
 }
