@@ -13,6 +13,10 @@
 - React router 5.1
 - Bootstrap 4
 
+### Artchitecture:
+- The architecture is following a flexible approach.
+- Code splitting to improve performance of the app.
+
 ## Coding style followed:
 - I'm following [Airbnb Code Style](https://github.com/airbnb/javascript/tree/master/react) and [Uncle Bob clean code book](https://www.amazon.com/
 - Prettier
