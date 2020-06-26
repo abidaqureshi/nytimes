@@ -4,44 +4,40 @@ orbs:
   cypress: cypress-io/cypress@1.23.0
   aws-s3: circleci/aws-s3@1.0.11
 jobs:
-   build:
+  build:
     docker:
       - image: circleci/node:12.9.1-browsers
-      
+
     working_directory: ~/repo
-    
+
     steps:
       - checkout
-      
+
       - restore_cache:
-        keys:
-          - v1-dependencies-{{ checksum "package.json" }}
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-          
+            - v1-dependencies-
       - run: npm install
-      
+
       - save_cache:
           paths:
             - node_modules
             - ~/.npm
             - ~/.cache
           key: v1-dependencies-{{ checksum "package.json" }}
-          
+
       - snyk/scan:
           fail-on-issues: false
           monitor-on-build: false
-          severity-threshold: high    
+          severity-threshold: high
 
       - run: npm run lint
-   
-  test:
+
       - run: npm run test
-      
-  build:
+
       - run: npm run build
-   
-  Deploy: 
+
       - aws-s3/sync:
           from: build
           to: "s3://nytimes-ci/"
