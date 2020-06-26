@@ -50,7 +50,6 @@ export function* fetchArticle(data) {
   }
 }
 
-
 export function* watchArticleEvents() {
   yield takeEvery(GET_ALL_ARTICLES, fetchAllArticles)
   yield takeEvery(GET_ARTICLES_BY_NAME, fetchArticlesByName)

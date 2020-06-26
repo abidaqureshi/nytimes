@@ -10,7 +10,6 @@ const formatDate = (date, dateFormat = 'Ymd', symbol = '-') => {
   let day = d.getDate() - 1
   const year = d.getFullYear()
 
-
   if (day < 10) day = `0${day}`
   if (dateFormat === 'Ymd') {
     return [year, month, day].join(symbol)

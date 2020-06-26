@@ -21,10 +21,10 @@ const Search = (props) => (
             className="custom-select mr-sm-2"
           >
             <option value="newest">
-                      Sort by newest
+              Sort by newest
             </option>
             <option value="oldest">
-                      Sort by oldest
+              Sort by oldest
             </option>
           </select>
         </div>

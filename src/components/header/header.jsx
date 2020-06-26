@@ -5,7 +5,7 @@ const Header = () => (
   <>
     <header className="center-contents py-3 ">
       <h5>
-      The New York Times
+        The New York Times
       </h5>
       <Navigation />
     </header>

@@ -4,7 +4,6 @@ import '../../styles/layout.scss'
 import Header from '../header/header'
 import Footer from '../footer/footer'
 
-
 const Layout = (props) => {
   const { children } = props
   return (

@@ -6,7 +6,6 @@ import {
   RENDER_ERROR_NOTIFICATION,
 } from '../../actions'
 
-
 const initalState = {
 
   articles: [],

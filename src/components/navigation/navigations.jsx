@@ -10,7 +10,7 @@ class Navigations extends PureComponent {
         {pathname !== '/' ?
           (
             <Link to="/">
-            Back to home
+              Back to home
             </Link>
           ) : ''}
 
