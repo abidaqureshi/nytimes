@@ -1,18 +1,22 @@
 version: 2.1
 jobs:
-  build-and-test:
+  build:
     docker:
       image: cimg/node:13.6.0
     steps:
       - checkout
       - run: node --version
       - run: npm -v
-      - node/with-cache:
-          steps:          
-            - run: npm install
-            - run: npm run lint
-            - run: npm run test
+      - run: npm install
+   
+   test:
+      - run: npm run lint
+      - run: npm run test
+      
 workflows:
-    build-and-test:
+    building:
       jobs:
-        - build-and-test
+        - build
+    Testing:
+      jobs:
+        - test
